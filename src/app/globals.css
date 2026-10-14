@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Cores === */
+  --color-bg: #0B0F1C;
+  --color-bg-alt: #121830;
+  --color-ink: #F4F6FB;
+  --color-mute: #9AA3BC;
+  --color-brand: #E8501B;
+  --color-line: rgb(255 255 255 / 0.12);
+  --color-hero-text: #C9CFE2;
+
+  /* === Tipografia === */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* === Espaçamentos extras === */
+  --spacing-section: 76px;
+  --spacing-section-mobile: 56px;
+}
+
+/* =====================================================
+   Base
+   ===================================================== */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   Tipografia global
+   ===================================================== */
+h1 {
+  font-size: clamp(34px, 8vw, 68px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: clamp(28px, 5.5vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+h2 em,
+h1 em {
+  font-style: normal;
+  color: var(--color-brand);
+}
+
+/* =====================================================
+   Utilitários de seção
+   ===================================================== */
+.section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+@media (max-width: 760px) {
+  .section-padding {
+    padding-top: var(--spacing-section-mobile);
+    padding-bottom: var(--spacing-section-mobile);
+  }
+}
+
+/* =====================================================
+   Fade-in ao rolar (apenas para quem não reduz motion)
+   ===================================================== */
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
