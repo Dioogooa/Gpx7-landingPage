@@ -3,8 +3,6 @@ import { Resend } from "resend";
 import { contatoSchema } from "@/lib/schema";
 import { allow } from "@/lib/rate-limit";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   // Rate limit por IP
   const ip =
@@ -42,36 +40,61 @@ export async function POST(req: Request) {
 
   const { nome, email, mensagem } = parsed.data;
 
-  // Envio via Resend
-  const { error } = await resend.emails.send({
-    from: process.env.CONTACT_FROM_EMAIL!,
-    to: process.env.CONTACT_TO_EMAIL!,
-    replyTo: email,
-    subject: `Novo contato pelo site — ${nome}`,
-    text: [
-      `Nome: ${nome}`,
-      `E-mail: ${email}`,
-      "",
-      "Mensagem:",
-      mensagem,
-    ].join("\n"),
-    html: `
-      <h2>Novo contato via site GPX7</h2>
-      <p><strong>Nome:</strong> ${nome}</p>
-      <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
-      <hr />
-      <p><strong>Mensagem:</strong></p>
-      <p>${mensagem.replace(/\n/g, "<br>")}</p>
-    `,
-  });
+  // Se a chave do Resend ainda não estiver configurada no ambiente (ex: durante aprovação)
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.log(
+      "[contato/route] RESEND_API_KEY não configurada. Mensagem simulada:",
+      { nome, email, mensagem }
+    );
+    return NextResponse.json({
+      ok: true,
+      message: "Mensagem recebida em modo demonstração.",
+    });
+  }
 
-  if (error) {
-    console.error("[contato/route] Resend error:", error);
+  // Envio via Resend quando a chave estiver configurada
+  try {
+    const resend = new Resend(apiKey);
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
+    const toEmail = process.env.CONTACT_TO_EMAIL || "contato@gpx7.com.br";
+
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
+      replyTo: email,
+      subject: `Novo contato pelo site — ${nome}`,
+      text: [
+        `Nome: ${nome}`,
+        `E-mail: ${email}`,
+        "",
+        "Mensagem:",
+        mensagem,
+      ].join("\n"),
+      html: `
+        <h2>Novo contato via site GPX7</h2>
+        <p><strong>Nome:</strong> ${nome}</p>
+        <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
+        <hr />
+        <p><strong>Mensagem:</strong></p>
+        <p>${mensagem.replace(/\n/g, "<br>")}</p>
+      `,
+    });
+
+    if (error) {
+      console.error("[contato/route] Resend error:", error);
+      return NextResponse.json(
+        { ok: false, error: "Falha no envio do e-mail. Tente novamente." },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error("[contato/route] Exceção no envio:", err);
     return NextResponse.json(
-      { ok: false, error: "Falha no envio do e-mail. Tente novamente." },
+      { ok: false, error: "Erro interno no servidor." },
       { status: 500 }
     );
   }
-
-  return NextResponse.json({ ok: true });
 }
