@@ -36,11 +36,11 @@ export const siteContent = {
   // Navegação do Header
   // ─────────────────────────────────────────────────────
   navigation: [
-    { label: "Home", href: "#hero" },
-    { label: "GPX7", href: "#quem-somos" },
-    { label: "Serviços", href: "#servicos" },
-    { label: "Portfólio", href: "#portfolio" },
-    { label: "Contato", href: "#contato" },
+    { label: "Home", href: "/#hero" },
+    { label: "GPX7", href: "/#quem-somos" },
+    { label: "Serviços", href: "/#servicos" },
+    { label: "Portfólio", href: "/#portfolio" },
+    { label: "Contato", href: "/#contato" },
   ],
 
   // ─────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ export const siteContent = {
     text: "Audiovisual, informática e iluminação para congressos, feiras e convenções, com estrutura própria e equipe técnica especializada.",
     cta: {
       label: "Fale com a GPX7",
-      href: "#contato",
+      href: "/#contato",
     },
   },
 
@@ -89,6 +89,10 @@ export const siteContent = {
   solutions: {
     eyebrow: "Soluções completas",
     title: "Tudo o que o seu evento precisa, **em um só parceiro**.",
+    cta: {
+      label: "Conhecer todos os serviços em detalhes",
+      href: "/servicos",
+    },
     items: [
       {
         id: "video",

@@ -37,7 +37,7 @@ export function Contato() {
     >
       {/* Imagem de fundo */}
       <Image
-        src="/images/cta-bg.jpg"
+        src="/images/cta-bg.jpeg"
         alt=""
         fill
         className="object-cover object-center"

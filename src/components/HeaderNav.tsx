@@ -145,7 +145,7 @@ export function HeaderNav() {
         <Container className="flex items-center justify-between">
           {/* Logo GPX7 sem fundo à esquerda, alinhada com o conteúdo da página */}
           <Link
-            href="#hero"
+            href="/"
             className="flex items-center transition-transform hover:opacity-90 active:scale-95"
             aria-label="GPX7 Home"
           >
@@ -166,7 +166,7 @@ export function HeaderNav() {
             aria-label="Menu principal"
           >
             {navigation.map((item) => {
-              const isCta = item.href === "#contato";
+              const isCta = item.href.endsWith("#contato");
               return (
                 <Link
                   key={item.href}
@@ -211,7 +211,7 @@ export function HeaderNav() {
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`py-2 text-[15px] font-medium transition-colors ${
-                    item.href === "#contato"
+                    item.href.endsWith("#contato")
                       ? "rounded-full bg-[var(--color-brand)] text-white font-bold mt-2"
                       : "text-[var(--color-mute)] hover:text-[var(--color-ink)]"
                   }`}
