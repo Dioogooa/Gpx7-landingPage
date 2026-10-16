@@ -57,7 +57,7 @@ export default function ServicosPage() {
               className="inline-flex items-center gap-2 text-[14px] font-medium text-[var(--color-mute)] hover:text-[var(--color-ink)] transition-colors px-4 py-2 rounded-full border border-[var(--color-line)] bg-[var(--color-bg-alt)]/60 backdrop-blur-sm"
             >
               <ArrowLeft size={16} />
-              <span>Voltar</span>
+              <span>Voltar para página inicial</span>
             </Link>
           </div>
 
@@ -100,14 +100,14 @@ export default function ServicosPage() {
 
                   <div className="flex flex-col gap-5">
                     {category.groups.map((subset, index) => (
-                      <div key={`${category.id}-${subset.label ?? index}`}>
-                        {subset.label ? (
+                      <div key={`${category.id}-${(subset as { label: string }).label ?? index}`}>
+                        {(subset as { label: string }).label ? (
                           <p className="text-[11px] uppercase tracking-[0.18em] font-bold mb-3 text-[var(--color-brand)]">
-                            {subset.label}
+                            {(subset as { label: string }).label}
                           </p>
                         ) : null}
                         <ul className="flex flex-col gap-2.5">
-                          {subset.items.map((item) => (
+                          {(subset as { items: string[] }).items.map((item) => (
                             <li
                               key={item}
                               className="flex items-start gap-2.5 text-[14.5px] leading-snug"
@@ -135,7 +135,7 @@ export default function ServicosPage() {
               Falar com o comercial
             </Button>
             <Button href="/#servicos" variant="outline">
-              Ver resumo na Home
+              Voltar
             </Button>
           </div>
         </Container>
