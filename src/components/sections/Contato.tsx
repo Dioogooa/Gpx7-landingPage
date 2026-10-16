@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -33,25 +32,15 @@ export function Contato() {
   return (
     <section
       id="contato"
-      className="relative section-padding scroll-mt-20"
+      className="relative section-padding scroll-mt-20 overflow-hidden"
+      style={{ background: "var(--color-bg)" }}
     >
-      {/* Imagem de fundo */}
-      <Image
-        src="/images/cta-bg.jpeg"
-        alt=""
-        fill
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-
-      {/* Overlay escuro */}
       <div
-        className="absolute inset-0"
-        style={{ background: "rgba(11,15,28,.88)" }}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[640px] h-[280px] rounded-full blur-[140px] pointer-events-none opacity-15"
+        style={{ background: "var(--color-brand)" }}
         aria-hidden="true"
       />
 
-      {/* Conteúdo */}
       <Container className="relative z-10 text-center">
         <Eyebrow className="justify-center flex">{contactSection.eyebrow}</Eyebrow>
 

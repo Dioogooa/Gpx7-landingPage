@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -11,38 +10,20 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-end"
-      style={{ minHeight: "92vh" }}
+      className="relative flex flex-col justify-end overflow-hidden"
+      style={{ minHeight: "92vh", background: "var(--color-bg)" }}
     >
-      {/* Imagem de fundo */}
-      <Image
-        src="/images/hero.jpg"
-        alt=""
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-
-      {/* Overlay gradiente */}
       <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(11,15,28,.65) 0%, rgba(11,15,28,.45) 45%, var(--color-bg) 100%)",
-        }}
+        className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[380px] rounded-full blur-[140px] pointer-events-none opacity-25"
+        style={{ background: "var(--color-brand)" }}
         aria-hidden="true"
       />
 
-      {/* Conteúdo do Hero */}
       <div className="relative z-10 w-full mt-auto">
         <Container className="pt-[160px] pb-[72px]">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
 
-          <SectionTitle
-            as="h1"
-            className="max-w-[820px] mb-6"
-          >
+          <SectionTitle as="h1" className="max-w-[820px] mb-6">
             {hero.title}
           </SectionTitle>
 

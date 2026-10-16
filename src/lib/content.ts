@@ -279,6 +279,90 @@ export const siteContent = {
   },
 
   // ─────────────────────────────────────────────────────
+  // Página /servicos — detalhamento por grupo
+  // ─────────────────────────────────────────────────────
+  servicesPage: {
+    eyebrow: "Estrutura completa · Em detalhes",
+    title: "Soluções completas para **transformar** seu evento.",
+    lead: "Quatro frentes técnicas com equipamentos próprios para congressos, feiras, convenções e transmissões.",
+    groups: [
+      {
+        id: "video",
+        icon: "Monitor",
+        title: "Vídeo",
+        groups: [
+          {
+            items: [
+              "Projetor 3000 ANSI lumens Full HD para salas",
+              "Projetor 6000 ANSI lumens para auditório",
+              "Telas para projeção de diversos tamanhos",
+              "Painel de LED indoor e processadoras de vídeo",
+              "Monitor ou TV de cronômetro (house clock)",
+              "TVs com suporte para stand ou ao longo dos eventos",
+            ],
+          },
+        ],
+      },
+      {
+        id: "som-luz-estrutura",
+        icon: "Lightbulb",
+        title: "Som, luz e estrutura",
+        groups: [
+          {
+            label: "Luz",
+            items: [
+              "PAR LED decorativos",
+              "Refletores de LED e canhão",
+              "Ribalta de LED",
+              "Moving beams",
+              "Mesa controladora de luz",
+            ],
+          },
+          {
+            label: "Som e estrutura",
+            items: [
+              "Microfones bastão e headset",
+              "Sistemas de som e caixas amplificadas",
+              "Mesas de som",
+              "Estruturas de treliça Q15 e palco",
+            ],
+          },
+        ],
+      },
+      {
+        id: "informatica-transmissao",
+        icon: "Laptop",
+        title: "Informática e transmissão",
+        groups: [
+          {
+            items: [
+              "Notebooks e computadores",
+              "Impressoras térmicas de adesivo",
+              "Impressoras monocromáticas e coloridas",
+              "Câmeras profissionais e tripé",
+              "Placas de captura e switchers de vídeo",
+            ],
+          },
+        ],
+      },
+      {
+        id: "comunicacao-visual",
+        icon: "Palette",
+        title: "Comunicação visual",
+        groups: [
+          {
+            items: [
+              "Fabricação de lonas personalizadas",
+              "Adesivos personalizados para stand",
+              "Banners X1 e roll-up",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // ─────────────────────────────────────────────────────
   // Contato / CTA
   // ─────────────────────────────────────────────────────
   contactSection: {
