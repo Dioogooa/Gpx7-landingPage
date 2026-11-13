@@ -94,22 +94,15 @@ A página é montada em `src/app/page.tsx`, na ordem abaixo. A navegação do to
 Elementos fixos: `HeaderNav` (topo) e `WhatsAppButton` (canto inferior direito).
 
 ### Capturas de tela
-<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/37282e6b-a040-49e6-bfcd-a41c508ae7ea" />
-<img width="1918" height="490" alt="image" src="https://github.com/user-attachments/assets/b6a8dbee-39ed-4bc4-b1ed-5abb09ede9cd" />
-<img width="1920" height="935" alt="image" src="https://github.com/user-attachments/assets/0e69c734-f6c0-4d93-aa60-41d29207fd99" />
-<img width="1918" height="521" alt="image" src="https://github.com/user-attachments/assets/9f962476-7600-45e8-8ad4-8af6db35ad0a" />
-<img width="1918" height="1145" alt="image" src="https://github.com/user-attachments/assets/5199e74f-0d12-4fa4-8cd2-308a52a27fdc" />
-
-
 
 <table>
   <tr>
-    <td align="center"><b>Hero</b><br><img src="https://github.com/user-attachments/assets/98e0febb-b82a-4d56-9b74-aad1d5048751" alt="Seção Hero" width="440"></td>
-    <td align="center"><b>Quem somos</b><br><img src="https://github.com/user-attachments/assets/37ed514f-55b6-4023-9170-370d9b83cd43" alt="Seção Quem somos" width="440"></td>
+    <td align="center"><b>Hero</b><br><img src="https://github.com/user-attachments/assets/37ed514f-55b6-4023-9170-370d9b83cd43" alt="Seção Hero" width="440"></td>
+    <td align="center"><b>Quem somos</b><br><img src="https://github.com/user-attachments/assets/98e0febb-b82a-4d56-9b74-aad1d5048751" alt="Seção Quem somos" width="440"></td>
   </tr>
   <tr>
     <td align="center"><b>Soluções</b><br><img src="https://github.com/user-attachments/assets/68d8964f-4935-4e1b-9425-88b4490a7bdd" alt="Seção Soluções" width="440"></td>
-    <td align="center"><b>Formatos</b><br><img src="src="https://github.com/user-attachments/assets/37282e6b-a040-49e6-bfcd-a41c508ae7ea" alt="Seção Formatos" width="440"></td>
+    <td align="center"><b>Formatos</b><br><img src="https://github.com/user-attachments/assets/37282e6b-a040-49e6-bfcd-a41c508ae7ea" alt="Seção Formatos" width="440"></td>
   </tr>
   <tr>
     <td align="center"><b>Processo</b><br><img src="https://github.com/user-attachments/assets/b6a8dbee-39ed-4bc4-b1ed-5abb09ede9cd" alt="Seção Processo" width="440"></td>
@@ -131,9 +124,6 @@ O header tem dois blocos que reagem à rolagem da página (gatilho: mais de 24 p
 | **Rolando** | Recolhe com transição suave | Fundo escuro translúcido com `backdrop-blur` e sombra |
 
 No mobile, a navbar vira um botão de menu (hambúrguer) que abre uma lista suspensa. O item **Contato** aparece destacado como botão em laranja.
-
-<img width="1918" height="148" alt="image" src="https://github.com/user-attachments/assets/4aa056ae-9d31-4007-887b-d1dbd748aeeb" />
-<img width="1920" height="74" alt="image" src="https://github.com/user-attachments/assets/a2142d00-4aac-42de-b074-6d03ce246646" />
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4aa056ae-9d31-4007-887b-d1dbd748aeeb" alt="Header no topo da página" width="440">
