@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/preview.png" alt="Prévia da landing page GPX7" width="900">
+  <img width="2542" height="1200" alt="image" src="https://github.com/user-attachments/assets/8140b704-0ba6-42ac-9e79-1ee5ad799dfe" />
 </p>
 
 ---
@@ -94,33 +94,32 @@ A página é montada em `src/app/page.tsx`, na ordem abaixo. A navegação do to
 Elementos fixos: `HeaderNav` (topo) e `WhatsAppButton` (canto inferior direito).
 
 ### Capturas de tela
+<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/37282e6b-a040-49e6-bfcd-a41c508ae7ea" />
+<img width="1918" height="490" alt="image" src="https://github.com/user-attachments/assets/b6a8dbee-39ed-4bc4-b1ed-5abb09ede9cd" />
+<img width="1920" height="935" alt="image" src="https://github.com/user-attachments/assets/0e69c734-f6c0-4d93-aa60-41d29207fd99" />
+<img width="1918" height="521" alt="image" src="https://github.com/user-attachments/assets/9f962476-7600-45e8-8ad4-8af6db35ad0a" />
+<img width="1918" height="1145" alt="image" src="https://github.com/user-attachments/assets/5199e74f-0d12-4fa4-8cd2-308a52a27fdc" />
+
+
 
 <table>
   <tr>
-    <td align="center"><b>Hero</b><br><img src="docs/screenshots/hero.png" alt="Seção Hero" width="440"></td>
-    <td align="center"><b>Quem somos</b><br><img src="docs/screenshots/quem-somos.png" alt="Seção Quem somos" width="440"></td>
+    <td align="center"><b>Hero</b><br><img src="https://github.com/user-attachments/assets/98e0febb-b82a-4d56-9b74-aad1d5048751" alt="Seção Hero" width="440"></td>
+    <td align="center"><b>Quem somos</b><br><img src="https://github.com/user-attachments/assets/37ed514f-55b6-4023-9170-370d9b83cd43" alt="Seção Quem somos" width="440"></td>
   </tr>
   <tr>
-    <td align="center"><b>Soluções</b><br><img src="docs/screenshots/solucoes.png" alt="Seção Soluções" width="440"></td>
-    <td align="center"><b>Formatos</b><br><img src="docs/screenshots/formatos.png" alt="Seção Formatos" width="440"></td>
+    <td align="center"><b>Soluções</b><br><img src="https://github.com/user-attachments/assets/68d8964f-4935-4e1b-9425-88b4490a7bdd" alt="Seção Soluções" width="440"></td>
+    <td align="center"><b>Formatos</b><br><img src="src="https://github.com/user-attachments/assets/37282e6b-a040-49e6-bfcd-a41c508ae7ea" alt="Seção Formatos" width="440"></td>
   </tr>
   <tr>
-    <td align="center"><b>Processo</b><br><img src="docs/screenshots/processo.png" alt="Seção Processo" width="440"></td>
-    <td align="center"><b>Eventos atendidos</b><br><img src="docs/screenshots/eventos.png" alt="Seção Eventos atendidos" width="440"></td>
+    <td align="center"><b>Processo</b><br><img src="https://github.com/user-attachments/assets/b6a8dbee-39ed-4bc4-b1ed-5abb09ede9cd" alt="Seção Processo" width="440"></td>
+    <td align="center"><b>Eventos atendidos</b><br><img src="https://github.com/user-attachments/assets/0e69c734-f6c0-4d93-aa60-41d29207fd99" alt="Seção Eventos atendidos" width="440"></td>
   </tr>
   <tr>
-    <td align="center"><b>Por que a GPX7</b><br><img src="docs/screenshots/por-que-gpx7.png" alt="Seção Por que a GPX7" width="440"></td>
-    <td align="center"><b>Contato</b><br><img src="docs/screenshots/contato.png" alt="Seção Contato" width="440"></td>
+    <td align="center"><b>Por que a GPX7</b><br><img src="https://github.com/user-attachments/assets/9f962476-7600-45e8-8ad4-8af6db35ad0a" alt="Seção Por que a GPX7" width="440"></td>
+    <td align="center"><b>Contato</b><br><img src="https://github.com/user-attachments/assets/5199e74f-0d12-4fa4-8cd2-308a52a27fdc" alt="Seção Contato" width="440"></td>
   </tr>
 </table>
-
-### Versão mobile
-
-<p align="center">
-  <img src="docs/screenshots/mobile.png" alt="Versão mobile" width="260">
-  &nbsp;&nbsp;
-  <img src="docs/screenshots/mobile-menu.png" alt="Menu mobile aberto" width="260">
-</p>
 
 ### Header dinâmico
 
@@ -133,9 +132,12 @@ O header tem dois blocos que reagem à rolagem da página (gatilho: mais de 24 p
 
 No mobile, a navbar vira um botão de menu (hambúrguer) que abre uma lista suspensa. O item **Contato** aparece destacado como botão em laranja.
 
+<img width="1918" height="148" alt="image" src="https://github.com/user-attachments/assets/4aa056ae-9d31-4007-887b-d1dbd748aeeb" />
+<img width="1920" height="74" alt="image" src="https://github.com/user-attachments/assets/a2142d00-4aac-42de-b074-6d03ce246646" />
+
 <p align="center">
-  <img src="docs/screenshots/header-topo.png" alt="Header no topo da página" width="440">
-  <img src="docs/screenshots/header-rolando.png" alt="Header após rolar a página" width="440">
+  <img src="https://github.com/user-attachments/assets/4aa056ae-9d31-4007-887b-d1dbd748aeeb" alt="Header no topo da página" width="440">
+  <img src="https://github.com/user-attachments/assets/a2142d00-4aac-42de-b074-6d03ce246646" alt="Header após rolar a página" width="440">
 </p>
 
 ---
@@ -340,12 +342,6 @@ sequenceDiagram
     end
     F-->>V: mensagem de sucesso ou erro
 ```
-
-<p align="center">
-  <img src="docs/screenshots/formulario-validacao.png" alt="Formulário exibindo erros de validação" width="440">
-  <img src="docs/screenshots/formulario-sucesso.png" alt="Formulário com mensagem de sucesso" width="440">
-</p>
-
 ### Regras de validação (`src/lib/schema.ts`)
 
 | Campo | Regra | Mensagem de erro |
